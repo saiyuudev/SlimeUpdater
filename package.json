@@ -1,0 +1,37 @@
+{
+  "name": "slimeupdater",
+  "version": "1.0.0",
+  "description": "An updater for minecraft server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiyuudev/SlimeUpdater.git"
+  },
+  "keywords": [
+    "expressjs",
+    "updater",
+    "minecraft",
+    "launcher"
+  ],
+  "author": "Saiyuu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saiyuudev/SlimeUpdater/issues"
+  },
+  "homepage": "https://github.com/saiyuudev/SlimeUpdater#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.18.0",
+    "fs": "^0.0.1-security",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  }
+}
