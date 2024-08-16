@@ -5,7 +5,7 @@ const formidable = require('express-formidable');
 
 console.log("Loading website...")
 
-App.set("views", "./templates")
+App.set("views", "./views")
 App.set("view engine", "ejs")
 App.use(express.static('public'));
 App.use(cookieParser())
