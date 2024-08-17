@@ -17,5 +17,7 @@ App.use(formidable({
 }));
 RouteManager.loadRoutes(App)
 
-App.listen(AppConfig.port)
+App.listen(AppConfig.port, () => {
+    console.log("The webserver is running at http://localhost:"+AppConfig.port)
+})
 
