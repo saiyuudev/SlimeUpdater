@@ -3,11 +3,20 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>SlimeUpdater - Login</title>
+    <title>SlimeUpdater - Log in</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./css/login.css'>
 </head>
 <body>
-    
+    <div class="login-container">
+        <form class="login-form" action="login" method="post">
+            <h2>SlimeUpdater</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="passwors">Password</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" class="slime-button" value="Log in">
+        </form>
+    </div>
 </body>
 </html>
