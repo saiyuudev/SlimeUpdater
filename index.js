@@ -2,7 +2,8 @@ const express = require("express")
 const App = express()
 const cookieParser = require('cookie-parser')
 const formidable = require('express-formidable');
-
+const RouteManager = require("./routes/RouteManager")
+const AppConfig = require("./config/App.json")
 console.log("Loading website...")
 
 App.set("views", "./views")
@@ -14,4 +15,7 @@ App.use(formidable({
     multiples: true,
     keepExtensions: true
 }));
+RouteManager.loadRoutes(App)
+
+App.listen(AppConfig.port)
 
