@@ -4,12 +4,14 @@ const Database = new Sequelize(DatabaseConfig.database, DatabaseConfig.username,
     host: DatabaseConfig.host,
     dialect: 'mariadb'
 })
+const UserModel = require("./models/UserModel")
 
 module.exports = {
     getDatabase : Database,
     load : async () => {
         try {
-            await Database.sync()
+            UserModel.load(Database)
+            await Database.sync({force:true})
             console.log("[Success] Database Loaded")
         } catch (error) {
             console.log("[Error] Unable to connect to the database")

@@ -4,6 +4,10 @@ const cookieParser = require('cookie-parser')
 const formidable = require('express-formidable');
 const RouteManager = require("./routes/RouteManager")
 const AppConfig = require("./config/App.json")
+const Database = require("./database/Database")
+
+Database.load()
+
 console.log("Loading website...")
 
 App.set("views", "./views")
