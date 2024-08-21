@@ -4,7 +4,8 @@
   "description": "An updater for minecraft server",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "create_user": "node ./tools/UserTool"
   },
   "repository": {
     "type": "git",

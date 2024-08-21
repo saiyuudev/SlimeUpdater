@@ -11,7 +11,7 @@ module.exports = {
     load : async () => {
         try {
             UserModel.load(Database)
-            await Database.sync({force:true})
+            await Database.sync()
             console.log("[Success] Database Loaded")
         } catch (error) {
             console.log("[Error] Unable to connect to the database")
