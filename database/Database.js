@@ -17,5 +17,6 @@ module.exports = {
             console.log("[Error] Unable to connect to the database")
             return false
         }
-    }
+    },
+    UserModel : UserModel.User
 }
