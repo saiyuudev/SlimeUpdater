@@ -24,6 +24,7 @@
   "homepage": "https://github.com/saiyuudev/SlimeUpdater#readme",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-formidable": "^1.2.0",
