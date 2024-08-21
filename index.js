@@ -5,6 +5,8 @@ const formidable = require('express-formidable');
 const RouteManager = require("./routes/RouteManager")
 const AppConfig = require("./config/App.json")
 const Database = require("./database/Database")
+const session = require('express-session')
+const morgan = require("morgan")
 
 Database.load()
 
@@ -19,6 +21,9 @@ App.use(formidable({
     multiples: true,
     keepExtensions: true
 }));
+App.use(session({secret: AppConfig.sessionSecret, saveUninitialized: true, resave: true}))
+App.use(morgan('dev'))
+
 RouteManager.loadRoutes(App)
 
 App.listen(AppConfig.port, () => {
