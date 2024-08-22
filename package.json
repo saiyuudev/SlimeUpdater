@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/saiyuudev/SlimeUpdater#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
     "ejs": "^3.1.10",
@@ -32,7 +33,6 @@
     "express-session": "^1.18.0",
     "fs": "^0.0.1-security",
     "mariadb": "^3.3.1",
-    "morgan": "^1.10.0",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",

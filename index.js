@@ -6,15 +6,18 @@ const RouteManager = require("./routes/RouteManager")
 const AppConfig = require("./config/App.json")
 const Database = require("./database/Database")
 const session = require('express-session')
-const morgan = require("morgan")
+const passport = require('passport')
+const bodyParser = require("body-parser")
 
 Database.load()
 
 console.log("Loading website...")
+require('./passport/Passport')(passport)
 
 App.set("views", "./views")
 App.set("view engine", "ejs")
 App.use(express.static('public'));
+App.use(bodyParser.json())
 App.use(cookieParser())
 App.use(formidable({
     encoding: 'utf-8',
@@ -22,7 +25,8 @@ App.use(formidable({
     keepExtensions: true
 }));
 App.use(session({secret: AppConfig.sessionSecret, saveUninitialized: true, resave: true}))
-App.use(morgan('dev'))
+App.use(passport.initialize())
+App.use(passport.session())
 
 RouteManager.loadRoutes(App)
 

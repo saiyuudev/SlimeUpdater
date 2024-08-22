@@ -2,7 +2,8 @@ const { Sequelize } = require("sequelize")
 const DatabaseConfig = require("../config/Database.json")
 const Database = new Sequelize(DatabaseConfig.database, DatabaseConfig.username, DatabaseConfig.password, {
     host: DatabaseConfig.host,
-    dialect: 'mariadb'
+    dialect: 'mariadb',
+    logging: false
 })
 const UserModel = require("./models/UserModel")
 
