@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>SlimeUpdater - Home</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/panel.css'>
+</head>
+<body>
+    <body>
+        <div class="navbar">
+            <div class="profile-container">
+                <p>Welcome <%= username %></p>
+            </div>
+            <div class="nav-links">
+                <a href="#">Upload Files</a>
+                <a href="#">Version Selector</a>
+                <% if (superAdmin == true) { %>
+                    <a href="#">Manage Users</a>
+                <% }%>
+            </div>
+            <div class="navbar-footer">
+                <div class="nav-links">
+                    <a href="../logout" style="font-size: 20px;">Log out</a>
+                </div>
+                &copy; Saiyuu - 2024
+            </div>
+        </div>
+    </body>
+</body>
+</html>
