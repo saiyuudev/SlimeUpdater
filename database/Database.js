@@ -6,12 +6,14 @@ const Database = new Sequelize(DatabaseConfig.database, DatabaseConfig.username,
     logging: false
 })
 const UserModel = require("./models/UserModel")
+const FileModel = require("./models/FileModel")
 
 module.exports = {
     getDatabase : Database,
     load : async () => {
         try {
             UserModel.load(Database)
+            FileModel.load(Database)
             await Database.sync()
             console.log("[Success] Database Loaded")
         } catch (error) {
@@ -19,5 +21,6 @@ module.exports = {
             return false
         }
     },
-    UserModel : UserModel.User
+    UserModel : UserModel.User,
+    FileModel : FileModel.File
 }
