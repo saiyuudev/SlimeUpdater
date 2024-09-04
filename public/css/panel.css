@@ -58,3 +58,30 @@ body {
     margin-left: 220px;
     margin-top: 50px;
 }
+
+/*Tabs Part*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #333;
+    background-color: #34495e;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab button:hover{
+    background-color: #475b6f;
+}
+
+.tab-image {
+    width: 100px;
+    height: 100px;
+}
+
